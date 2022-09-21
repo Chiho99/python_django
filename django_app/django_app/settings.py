@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hello'
 ]
 
 MIDDLEWARE = [
@@ -122,4 +123,4 @@ except ImportError:
     pass
 
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "")
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "hogehoge")
