@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'hello/css/style.css' %}">
-    <link rel="stylesheet" type="text/css" </head>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
 
 <body class="container">
     <div>
         <h1 class="display-4 text-primary">{{title}}</h1>
         <p class="h5 mt-4">{{msg}}</p>
-        <p><a href="{% url goto %}">{{goto}}</a></p>
     </div>
     <div>
         <!-- formの作成 -->
         <form action="{% url 'form' %}" method=" post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="username">name:&nbsp;</label>
-                <input id="username" type="text" name="username">
+                <label for="msg">name:&nbsp;</label>
+                <input id="msg" type="text" name="msg">
             </div>
             <input class="btn btn-primary" type="submit" value="click">
         </form>

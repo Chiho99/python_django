@@ -22,5 +22,7 @@ from . import info
 urlpatterns = [
     path('', views.showIndex, name='previous'),
     path('next', views.next, name='next'),
+    path('top', views.top, name='top'),
+    path('form', views.form, name='form'),
     path('<int:id>/<nickname>/', info.index, name='index')
 ]

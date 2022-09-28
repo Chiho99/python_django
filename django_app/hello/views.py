@@ -26,3 +26,23 @@ def next(request):
     }
 
     return render(request, 'hello/index.html', params)
+
+
+def top(request):
+    params = {
+        'title': 'Hello/Top',
+        'msg': 'Write your name.',
+    }
+
+    return render(request, 'hello/form.html', params)
+
+
+def form(request):
+    # inputタグのname属性で指定
+    username = request.POST.get('msg')
+    params = {
+        'title': 'Hello/Form',
+        'msg': 'Hello' + username + 'Nice to meet you.'
+    }
+
+    return render(request, 'hello/form.html', params)
